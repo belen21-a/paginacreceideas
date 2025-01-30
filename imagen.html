@@ -9,15 +9,81 @@
     <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
     <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
     <style>
+           header {
+            background: #1e3a5f;
+            backdrop-filter: blur(5px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-link {
+            color: #1e3a5f !important;
+            position: relative;
+            padding: 0.5rem 1rem;
+            transition: all 0.3s ease;
+            opacity: 0.9;
+        }
+
+        .nav-link:hover {
+            opacity: 1;
+            color: #9AC51F !important;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 50%;
+            background: #9AC51F;
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            animation: slideRight 2s ease-out forwards;
+        }
+
+        .logo-container span {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .logo-container .crece {
+            color: #9AC51F;
+        }
+        .logo-container .ideas {
+            color: #0077B6;
+        }
+
         .service-card {
             opacity: 0;
             transform: translateY(20px);
-            transition: opacity 0.5s ease, transform 0.5s ease;
+            transition: all 0.5s ease;
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         .service-card.show {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            background: rgba(255, 255, 255, 0.95);
+        }
+
+        .service-card i {
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover i {
+            transform: scale(1.2);
         }
 
         .section-content {
@@ -55,60 +121,126 @@
         }
 
         .client-logo {
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease;
-        }
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
 
-        .client-logo.show {
-            opacity: 1;
-            transform: translateY(0);
+.client-logo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        .client-logo:hover {
+            transform: scale(1.05);
         }
 
         .schedule-content {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.5s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.schedule-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+        .schedule-button {
+            background: linear-gradient(45deg, #9AC51F, #0077B6);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: block;
+            margin: auto;
         }
 
-        .schedule-content.active {
-            opacity: 1;
-            transform: translateY(0);
+        .schedule-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+        }
+
+        #inicio h1 {
+            background: linear-gradient(to right, #ffffff, #9AC51F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
         
+        #sobre-nosotros h2 {
+            background: linear-gradient(to right, #ffffff, #9AC51F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
 
-        .animated-bg {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('./imagenes/informatica.jpg');
-    background-position: center;
-    background-size: cover;
-    opacity: 0.3;
-    animation: enhancedPulse 7s infinite;
-    z-index: -1;
-}
+        #inicio p {
+            color: rgba(255, 255, 255, 0.9);
+        }
 
-@keyframes enhancedPulse {
-    0% {
-        transform: scale(1) translate(0, 0);
-    }
-    25% {
-        transform: scale(1.05) translate(3px, 3px);
-    }
-    50% {
-        transform: scale(1.1) translate(0, 5px);
-    }
-    75% {
-        transform: scale(1.05) translate(-3px, 3px);
-    }
-    100% {
-        transform: scale(1) translate(0, 0);
-    }
-}
+        #sobre-nosotros p, #sobre-nosotros span {
+            color: rgba(255, 255, 255, 0.9) !important;
+        }
+        
+        #sobre-nosotros i {
+            color: rgba(39, 218, 77, 0.9);
+        }
 
+        #clientes h2 {
+            background: linear-gradient(to right, #ffffff, #9AC51F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #contacto h2 {
+            background: linear-gradient(to right, #ffffff, #9AC51F);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        #contacto p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        #contacto .schedule-content a {
+            background: linear-gradient(45deg, #9AC51F, #0077B6);
+            color: white;
+            font-weight: bold;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 15px rgba(154, 197, 31, 0.3);
+        }
+
+        #contacto .schedule-content a:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(154, 197, 31, 0.4);
+            background: linear-gradient(45deg, #0077B6, #9AC51F);
+        }
+
+        .video-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: -1;
+        }
+
+        #background-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .hero-image {
             position: fixed;
@@ -120,12 +252,6 @@
             opacity: 0;
             transition: opacity 0.3s ease-in-out;
             z-index: 1000;
-        }
-
-        .logo-container {
-            display: flex;
-            align-items: center;
-            animation: slideRight 2s ease-out forwards;
         }
 
         @keyframes slideRight {
@@ -146,12 +272,53 @@
             opacity: 0;
             transition: opacity 1s ease-in-out;
         }
+
+        .schedule-button {
+            background: linear-gradient(45deg, #9AC51F, #0077B6);
+            border: none;
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .schedule-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+        }
+
+        .schedule-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255, 255, 255, 0.2),
+                transparent
+            );
+            transition: 0.5s;
+        }
+
+        .schedule-button:hover::before {
+            left: 100%;
+        }
     </style>
 </head>
 <body class="bg-gray-100">
     <div id="hero-container"></div>
     <div id="main-content">
-        <div class="animated-bg"></div>
+        <div class="video-container">
+            <video autoplay loop muted playsinline id="background-video">
+                <source src="./Bienvenido2.mp4" type="video/mp4">
+            </video>
+        </div>
         
         <header class="bg-white bg-opacity-95 shadow-md fixed w-full z-50">
             <nav class="container mx-auto px-6 py-3">
@@ -163,11 +330,11 @@
                         </span>
                     </div>
                     <div class="hidden md:flex space-x-6">
-                        <button onclick="showSection('inicio')" class="text-gray-800 hover:text-blue-600 transition duration-300">Inicio</button>
-                        <button onclick="showSection('servicios')" class="text-gray-800 hover:text-blue-600 transition duration-300">Servicios</button>
-                        <button onclick="showSection('sobre-nosotros')" class="text-gray-800 hover:text-blue-600 transition duration-300">Sobre Nosotros</button>
-                        <button onclick="showSection('clientes')" class="text-gray-800 hover:text-blue-600 transition duration-300">Clientes</button>
-                        <button onclick="showSection('contacto')" class="text-gray-800 hover:text-blue-600 transition duration-300">Agendar</button>
+                        <button onclick="showSection('inicio')" class="nav-link">Inicio</button>
+                        <button onclick="showSection('servicios')" class="nav-link">Servicios</button>
+                        <button onclick="showSection('sobre-nosotros')" class="nav-link">Sobre Nosotros</button>
+                        <button onclick="showSection('clientes')" class="nav-link">Clientes</button>
+                        <button onclick="showSection('contacto')" class="nav-link">Agendar</button>
                     </div>
                 </div>
             </nav>
@@ -178,9 +345,6 @@
                 <div class="container mx-auto px-6 text-center relative z-10">
                     <h1 class="text-5xl font-bold text-gray-800 mb-8">Bienvenido a Creceideas</h1>
                     <p class="text-2xl text-gray-800 mb-12">Asesoría informática completa para hacer crecer tu negocio</p>
-                   
-    
-                    </div>
                 </div>
             </section>
 
@@ -257,7 +421,6 @@
                         <img src="imagenes/bansur.svg" alt="Bansur Coop" class="client-logo w-auto h-40 mx-auto">
                         <img src="imagenes/integra.svg" alt="Integra" class="client-logo w-auto h-40 mx-auto">
                         <img src="imagenes/Master papa.svg" alt="Master papa" class="client-logo w-auto h-40 mx-auto">
-                        <img src="imagenes/Multimaq.svg" alt="Multimaq" class="client-logo w-auto h-40 mx-auto">
                     </div>
                 </div>
             </section>
