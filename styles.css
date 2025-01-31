@@ -1,0 +1,288 @@
+header {
+    background: #1e3a5f;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-link {
+    color: #1e3a5f !important;
+    position: relative;
+    padding: 0.5rem 1rem;
+    transition: all 0.3s ease;
+    opacity: 0.9;
+}
+
+.nav-link:hover {
+    opacity: 1;
+    color: #9AC51F !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background: #9AC51F;
+    transition: all 0.3s ease;
+    transform: translateX(-50%);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    animation: slideRight 2s ease-out forwards;
+}
+
+.logo-container span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.logo-container .crece {
+    color: #9AC51F;
+}
+
+.logo-container .ideas {
+    color: #0077B6;
+}
+
+.service-card {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    backdrop-filter: blur(5px);
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.service-card.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.service-card:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.95);
+}
+
+.service-card i {
+    transition: transform 0.3s ease;
+}
+
+.service-card:hover i {
+    transform: scale(1.2);
+}
+
+.section-content {
+    display: none;
+    padding: 2rem;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.section-content.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#servicios.active {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 6rem;
+}
+
+.about-content {
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: all 0.5s ease;
+}
+
+.about-content.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.client-logo {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.5s ease;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.client-logo.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.client-logo:hover {
+    transform: scale(1.05);
+}
+
+.schedule-content {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.schedule-content.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.schedule-button {
+    background: linear-gradient(45deg, #9AC51F, #0077B6);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    display: block;
+    margin: auto;
+}
+
+.schedule-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 119, 182, 0.3);
+}
+
+#inicio h1 {
+    background: linear-gradient(to right, #ffffff, #9AC51F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#inicio p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#sobre-nosotros h2 {
+    background: linear-gradient(to right, #ffffff, #9AC51F);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
+
+
+#sobre-nosotros p, #sobre-nosotros span {
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#sobre-nosotros i {
+    color: rgba(39, 218, 77, 0.9);
+}
+
+#clientes h2 {
+    background: linear-gradient(to right, #ffffff, #9AC51F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contacto h2 {
+    background: linear-gradient(to right, #ffffff, #9AC51F);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+#contacto p {
+    color: rgba(255, 255, 255, 0.9);
+}
+
+#contacto .schedule-content a {
+    background: linear-gradient(45deg, #9AC51F, #0077B6);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 15px rgba(154, 197, 31, 0.3);
+}
+
+#contacto .schedule-content a:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(154, 197, 31, 0.4);
+    background: linear-gradient(45deg, #0077B6, #9AC51F);
+}
+
+.video-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1;
+}
+
+#background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.hero-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+@keyframes slideRight {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#main-content {
+    display: none;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.schedule-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.2),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.schedule-button:hover::before {
+    left: 100%;
+}
+

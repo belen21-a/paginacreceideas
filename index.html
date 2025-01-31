@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreceIdeas - Asesoría Informática Completa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+    <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-100">
+    <div id="hero-container"></div>
+    <div id="main-content">
+        <div class="video-container">
+            <video autoplay loop muted playsinline id="background-video">
+                <source src="./Bienvenido2.mp4" type="video/mp4">
+            </video>
+        </div>
+        
+        <header class="bg-white bg-opacity-95 shadow-md fixed w-full z-50">
+            <nav class="container mx-auto px-6 py-3">
+                <div class="flex justify-between items-center">
+                    <div class="logo-container">
+                        <img src="./imagenes/Imagen de WhatsApp 2025-01-24 a las 12.48.22_63a499dc.svg" alt="Logo Crece Ideas" class="h-10 w-auto">
+                        <span class="text-xl font-bold ml-2">
+                            <span class="text-[#9AC51F]">crece</span><span class="text-[#0077B6]">ideas</span>
+                        </span>
+                    </div>
+                    <div class="hidden md:flex space-x-6">
+                        <button onclick="showSection('inicio')" class="nav-link">Inicio</button>
+                        <button onclick="showSection('servicios')" class="nav-link">Servicios</button>
+                        <button onclick="showSection('sobre-nosotros')" class="nav-link">Sobre Nosotros</button>
+                        <button onclick="showSection('clientes')" class="nav-link">Clientes</button>
+                        <button onclick="showSection('contacto')" class="nav-link">Agendar</button>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="pt-16">
+            <section id="inicio" class="min-h-screen flex flex-col justify-center items-center py-20 relative">
+                <div class="container mx-auto px-6 text-center relative z-10">
+                    <h1 class="text-5xl font-bold mb-8">Bienvenido a Creceideas</h1>
+                    <p class="text-2xl mb-12">Asesoría informática completa para hacer crecer tu negocio</p>
+                </div>
+            </section>
+
+
+            
+            <section id="servicios" class="section-content py-20">
+                <div class="service-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-lightbulb text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-xl font-semibold">Asesorías</h3>
+                    </div>
+                    <p class="text-gray-600">Apoyo y guía en transformación digital, análisis de riesgos, adopción de nuevas tecnologías y normalización de procesos internos.</p>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-laptop-code text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-xl font-semibold">Diseño y Desarrollo</h3>
+                    </div>
+                    <p class="text-gray-600">Creación de sitios web, aplicaciones web y móviles a medida. Mantención y actualización de plataformas existentes.</p>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-headset text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-xl font-semibold">Soporte</h3>
+                    </div>
+                    <p class="text-gray-600">Soporte remoto, presencial y de emergencia disponible. Soluciones en menos de 30 minutos para el 80% de incidentes.</p>
+                </div>
+
+                <div class="service-card bg-white rounded-lg p-6 shadow-md">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-tools text-3xl text-blue-600 mr-4"></i>
+                        <h3 class="text-xl font-semibold">Mantención Preventiva</h3>
+                    </div>
+                    <p class="text-gray-600">Mantenimiento de hardware y software, limpieza de equipos, revisión de redes y escaneo de software malicioso.</p>
+                </div>
+            </section>
+
+
+            <section id="sobre-nosotros" class="section-content py-20">
+                <div class="about-content w-full max-w-4xl mx-auto">
+                    <div class="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 class="text-3xl font-bold mb-6">Sobre Nosotros</h2>
+                            <p class="text-lg mb-6">En Creceideas acompañamos a las empresas con soluciones confiables, ayudándolas a crecer y optimizar su tecnología sin preocupaciones.</p>
+                            <ul class="space-y-4">
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Más de 10 años de experiencia</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Equipo altamente cualificado</span>
+                                </li>
+                                <li class="flex items-center">
+                                    <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                    <span>Soluciones personalizadas</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/O-que-e-software-ha1jD9aTz2WCZ3O2eqGVYNMVzoPI4N.png" alt="Consultoría IT" class="rounded-lg shadow-lg">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="clientes" class="section-content py-20">
+                <div class="w-full max-w-6xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">Nuestros Clientes</h2>
+                    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                        <img src="imagenes/nallar.svg" alt="Nallar" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/protactical.svg" alt="Protactical" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/ideasenpalet.svg" alt="Ideas en Palet" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/jyt.jpg" alt="JYT" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/bansur.svg" alt="Bansur Coop" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/integra.svg" alt="Integra" class="client-logo w-auto h-40 mx-auto">
+                        <img src="imagenes/Master papa.svg" alt="Master papa" class="client-logo w-auto h-40 mx-auto">
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="contacto" class="section-content py-20">
+                <div class="schedule-content w-full max-w-2xl mx-auto">
+                    <h2 class="text-3xl font-bold text-center text-gray-800 mb-8">Agenda una Reunión</h2>
+                    <p class="text-lg text-center text-gray-700 mb-8">
+                        Agenda una reunión con nosotros para discutir cómo podemos ayudarte a crecer con nuestras soluciones informáticas.
+                    </p>
+                    <div class="text-center">
+                        <a href="#" 
+                           onclick="Calendly.initPopupWidget({url: 'https://calendly.com/belenacuna120/reunioncreceideas?locale=es'}); return false;"
+                           class="inline-block bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition duration-300">
+                            Agendar Reunión
+                        </a>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="scripts.js"></script>
+</body>
+</html>
+
+
+
