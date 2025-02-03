@@ -142,10 +142,10 @@ window.addEventListener('load', () => {
     showNextHeroImage();
 });
 
-// Código para el menú móvil
 const mobileMenuButton = document.getElementById('mobile-menu-button');
 const mobileMenu = document.getElementById('mobile-menu');
 
+// Función para alternar el menú en móviles y tablets
 mobileMenuButton.addEventListener('click', () => {
     mobileMenu.classList.toggle('hidden');
 });
@@ -155,4 +155,14 @@ document.querySelectorAll('#mobile-menu button').forEach(button => {
     button.addEventListener('click', () => {
         mobileMenu.classList.add('hidden');
     });
+});
+
+// Cerrar el menú si se hace clic fuera de él (para mejorar experiencia en tablet)
+document.addEventListener('click', (event) => {
+    const isClickInsideMenu = mobileMenu.contains(event.target);
+    const isClickOnButton = mobileMenuButton.contains(event.target);
+    
+    if (!isClickInsideMenu && !isClickOnButton) {
+        mobileMenu.classList.add('hidden');
+    }
 });
