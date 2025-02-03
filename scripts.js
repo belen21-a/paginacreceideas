@@ -141,3 +141,18 @@ function animateSectionContent(sectionId, selectedSection) {
 window.addEventListener('load', () => {
     showNextHeroImage();
 });
+
+// Código para el menú móvil
+const mobileMenuButton = document.getElementById('mobile-menu-button');
+const mobileMenu = document.getElementById('mobile-menu');
+
+mobileMenuButton.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+});
+
+// Cerrar el menú al seleccionar una opción
+document.querySelectorAll('#mobile-menu button').forEach(button => {
+    button.addEventListener('click', () => {
+        mobileMenu.classList.add('hidden');
+    });
+});

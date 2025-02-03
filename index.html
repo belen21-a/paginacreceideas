@@ -1,4 +1,18 @@
 <!DOCTYPE html>
+<!-- Dice a los navegadores que use codificación UTF-8 (para mostrar caracteres especiales correctamente) -->
+<meta charset="UTF-8">
+
+<!-- Hace que tu página sea responsive -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Description: Es lo que Google muestra debajo del título en los resultados de búsqueda -->
+<meta name="description" content="Asesoría informática completa para empresas. Servicios de desarrollo web, soporte técnico y mantención preventiva en Chile">
+
+<!-- Keywords: Palabras clave para que Google entienda de qué trata la página -->
+<meta name="keywords" content="asesoría informática, desarrollo web, soporte técnico, mantención preventiva, consultoría IT">
+
+<!-- URL canónica: Le dice a Google cuál es la URL principal del sitio -->
+<link rel="canonical" href="URL-DEL-SITIO">
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -28,12 +42,31 @@
                             <span class="text-[#9AC51F]">crece</span><span class="text-[#0077B6]">ideas</span>
                         </span>
                     </div>
+                    <!-- Menú desktop -->
                     <div class="hidden md:flex space-x-6">
                         <button onclick="showSection('inicio')" class="nav-link">Inicio</button>
                         <button onclick="showSection('servicios')" class="nav-link">Servicios</button>
                         <button onclick="showSection('sobre-nosotros')" class="nav-link">Sobre Nosotros</button>
                         <button onclick="showSection('clientes')" class="nav-link">Clientes</button>
                         <button onclick="showSection('contacto')" class="nav-link">Agendar</button>
+                    </div>
+                    
+                    <!-- Botón menú móvil -->
+                    <div class="md:hidden">
+                        <button id="mobile-menu-button" class="text-gray-600 hover:text-gray-900 focus:outline-none">
+                            <i class="fas fa-bars text-2xl"></i>
+                        </button>
+                    </div>
+                </div>
+            
+                <!-- Menú móvil desplegable -->
+                <div id="mobile-menu" class="hidden md:hidden bg-white absolute top-full left-0 w-full shadow-lg">
+                    <div class="px-4 py-2 space-y-3">
+                        <button onclick="showSection('inicio')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Inicio</button>
+                        <button onclick="showSection('servicios')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Servicios</button>
+                        <button onclick="showSection('sobre-nosotros')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Sobre Nosotros</button>
+                        <button onclick="showSection('clientes')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Clientes</button>
+                        <button onclick="showSection('contacto')" class="block w-full text-left py-2 px-4 hover:bg-gray-100">Agendar</button>
                     </div>
                 </div>
             </nav>
